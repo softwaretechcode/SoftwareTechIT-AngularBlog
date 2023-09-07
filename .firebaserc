@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "softwaretechitapp": {
+      "hosting": {
+        "FireBaseAngular": [
+          "softwaretechitapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "softwaretechitapp"
+  }
+}

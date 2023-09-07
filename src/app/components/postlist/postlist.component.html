@@ -1,0 +1,31 @@
+<div class="d-flex postlist-container">
+    <div class="row carousel slide">
+      
+    <div *ngFor="let i of blogPosts;" class=" card ">
+      <a (click)="openDetailPost(i.slug)" >
+      <div class="imgbg">
+        <img *ngIf="i.featuredImage!=null" class="featuredImage" [src]="apiUrl+i.featuredImage"  >
+        <img *ngIf="i.featuredImage==null" class="featuredImage" src="/src/assets/logo.png" >
+      </div> 
+      
+      <h2 type="button" (click)="openDetailPost(i.slug)">{{i.title | slice:0:50 }}{{ i.title.length > 50 ? '...' : ''}} </h2>
+      <a class="category-link" href="">📂{{i.category}}</a>
+      <p>{{i.subTitle | slice:0:80 }}{{ i.subTitle.length > 80 ? '...' : ''}} </p>
+      <h4><i *ngIf="i.author.avatar!=null" class="bi bi-person-circle"></i> {{i.author.name}} 
+        <i class="bi bi-suit-heart-fill poplike" ></i>
+       </h4>
+      <input type="button" class="btn btn-warning "
+       (click)="openDetailPost(i.slug)" value="Read More">
+       <div class="row text-post-bottom">
+        <p class="col"><i class="bi bi-clock"></i>{{i.date}}</p>
+        <a class="col" href="/"><p class="shareicon"><i class="bi bi-share"></i> Share</p></a>
+        
+       </div>
+      </a>
+    
+  </div>
+    <div *ngIf="blogPosts==null">
+      <h1>No Post Found</h1>
+    </div></div>
+ 
+  </div>

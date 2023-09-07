@@ -1,0 +1,36 @@
+
+mat-drawer-container{
+  background-color:#00000000;
+}
+.table{
+  color: var(--font-color);
+ }
+ 
+
+.card {
+  align-items: center;
+  background-color: #73efe527;
+}
+li {
+  color: var(--font-color);
+  list-style: none;
+}
+.post-card{
+  background-color: #73efe527;
+  color:var(--font-color);
+  width: 12rem;
+  
+}
+
+.post-card:hover{
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px #2fff896d;
+  
+  background: #ffd7616b;
+  transition: transform 0.3s ease-out;
+}
+.featuredImage{
+  width: 10rem;
+  border: dashed ;
+}

@@ -1,0 +1,25 @@
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon (click)="this.sideNav.open()"  *ngIf="!sideNav?.opened">menu</mat-icon>
+    <mat-icon (click)="this.sideNav.close()" *ngIf="sideNav?.opened">close</mat-icon>
+  </button>
+  
+  <mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav">
+    <h2 class="text-color">Dashboard</h2>
+      <mat-action-list *ngFor="let menuItem of menuItems">
+          <a routerLink={{menuItem.link}}> <mat-icon class="text-color">{{menuItem.icon}}</mat-icon> {{menuItem.title}}</a>
+      </mat-action-list>
+      <mat-action-list>
+        <a style="color:var(--text-share)" (click)="logOut()"><mat-icon style="color:#ff0e0e">logout</mat-icon>LogOut</a>
+      </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-container *ngIf="router.url == '/dashboard'">
+      <app-blogposts ></app-blogposts>
+    </ng-container>
+    
+      <router-outlet></router-outlet>
+   
+    
+  </mat-sidenav-content>
+  </mat-sidenav-container>

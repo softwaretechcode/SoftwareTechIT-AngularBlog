@@ -1,0 +1,128 @@
+/* .postlist-container{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin: 0 1rem;
+
+} */
+.postlist-container .row{
+  margin: 1rem;
+  /* justify-content: center; */
+}
+
+.card{
+  width: 15rem;
+  margin: 0.2rem;
+  background-color: var(--t-bg-color-aqua);
+    color:var(--font-color);
+    border: 0.1rem dashed;
+}
+.card:hover{
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px #2fff896d;
+  box-shadow: #fff7002d;
+  background: #ffd7616b;
+  transition: transform 0.3s ease-out;
+}
+.card h4{
+  font-weight: 500;
+}
+.card h2{
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.card .poplike{
+   margin: 0.4rem;
+   font-size: 1.3rem;
+   color:var(--primary-color);
+}
+.card .poplike:hover{
+  color:red;
+}
+
+.category-link{
+  text-decoration: none;
+}
+.card .imgbg{
+  display: flex;
+  background: linear-gradient(to right, #fff28f6d, #daa5cc81);
+  width: 100%;
+  height: 25vh;
+  
+}
+
+.card .featuredImage{
+  /* border: dashed ; */
+  /* padding: 1%; */
+  width: 100%;
+  height: 100%;
+}
+
+.card .authorAvatar{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  border:2px solid black;
+}
+.card .btn{
+  width: 100%;
+  margin: 0.2rem;
+}
+.card .text-post-bottom{
+  font-size: 0.6rem;
+  
+}
+.card .text-post-bottom .shareicon{
+  color:var(--text-share); 
+  
+}
+@media (max-width:450px) {
+  .postlist-container{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+  
+  .container{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .card{
+    background-color: #73efe527;
+    width: 90%;
+    margin: 0.5rem;
+    height: max-content;
+    border: dashed ;
+}
+
+.card h2,p{
+  text-align: center;
+}
+.card h2{
+  font-size: 1.4rem;
+  font-weight: 700;
+  
+}
+.card p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card .imgbg{
+  width: 100%;
+  height: 25vh;
+}
+.card .featuredImage{
+  /* border: dashed ; */
+  height:100%;
+}
+
+}
