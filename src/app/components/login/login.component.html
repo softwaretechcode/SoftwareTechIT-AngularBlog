@@ -3,28 +3,32 @@
     <div class="col-12 d-flex justify-content-center">
       <div class="card shadow">
         <div class="card-body">
-          <form>
+          <form (ngSubmit)="login(loginForm.control.value)" #loginForm="ngForm" method="post">
             <div class="mb-3">
               <h4 > Login </h4>
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label0">Email address</label>
-              <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Enter Email">
+              <input type="email" class="form-control" name="email" ngModel #email="ngModel" placeholder="Enter Email" required="required" 
+              [ngClass]="{'is-invalid':email.invalid && email.touched, 'is-valid':email.valid && email.touched}" />
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Enter Password">
+              <input type="password" class="form-control" name="password" ngModel #password="ngModel" placeholder="Enter Password" required="required" 
+              [ngClass]="{'is-invalid':password.invalid && password.touched, 'is-valid':password.valid && password.touched}" />
             </div>
-            <button type="button" class="btn btn-info" (click)="login()">Login</button>
+            <button type="submit" class="btn btn-info"  [disabled]="loginForm.invalid">Login</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
             <div class="row">
               <div class="col-md-6">
-                <a routerLink="/sing-up" style="text-decoration: none;"> Need Account ? <span class="text-danger">Register</span></a>
+                <a routerLink="/sign-up" style="text-decoration: none;"> Need Account ? <span class="text-danger">Register</span></a>
               </div>
               <div class="col-md-6">
-                <a href=""  (click)="forgetPassword()">Forget Password ?</a>
+                <a href=""  (click)="forgetPassword(email.value)">Forget Password ?</a>
               </div>
             </div>
           </form>
+        
         </div>
       </div>
     </div>

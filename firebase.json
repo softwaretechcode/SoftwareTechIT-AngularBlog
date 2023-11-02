@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "FireBaseAngular",
-      "source": ".",
+      "site": "stitpass",
+    "public": "dist/softwaretechit",
       "frameworksBackend": {}
     }
   ]

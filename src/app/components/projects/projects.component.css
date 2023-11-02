@@ -1,3 +1,29 @@
 .page-title{
-    font-family: cera-round-pro, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--font-color);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.container{
+    color: var(--font-color);
+}
+.card{
+    background: #00000000;
+}
+/* .card:hover{
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+  0 24px 46px #2fff896d;
+box-shadow: #fff7002d;
+background: #ffd7616b;
+transition: transform 0.3s ease-out;
+}
+.btn:hover{
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+  0 24px 46px #2fff896d;
+box-shadow: #fff7002d;
+background: #ffd7616b;
+color: var(--font-color);
+transition: transform 0.3s ease-out;
+} */

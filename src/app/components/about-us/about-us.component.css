@@ -1,0 +1,26 @@
+
+.top-title{
+ text-align: center;
+ font-size: 1.8rem;
+
+}
+.about-title{
+text-align: center;
+ font-size: 1.8rem;
+}
+.container p{
+  color: var(--font-color);
+  margin: 1rem;
+  text-wrap: balance;
+}
+
+.grediant-text{
+ 
+    /* font-size: 2.3em; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(90deg, #ff5601 2.34%, #9d00ff 100.78%);
+  /* linear-gradient(90deg,#4d88c4 2.34%,#964be1 100.78%); */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}

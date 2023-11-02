@@ -3,7 +3,13 @@ header{
     /* border: 2px solid #7c7b7b2d; */
     box-shadow: 0px 2px 2px  #7c7b7b2d;
 }
-
+.navbar{
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   
+}
 .logo {
     display: flex;
     align-items: center;
@@ -22,7 +28,7 @@ header{
     padding: 0;
 }
 .bgnav{
-    padding: 5px;
+    padding: 1px;
     display: block;
     background-color: var(--btn-bg);
 
@@ -104,3 +110,8 @@ header{
     transform: translateX(24px);
   }
   
+  @media (max-width:767px) {
+    .navbar-2{
+        display: none;
+    }
+  }

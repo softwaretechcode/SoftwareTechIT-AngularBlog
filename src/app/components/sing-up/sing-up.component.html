@@ -10,36 +10,43 @@
               <div class="row">
               <div class="mb-3 col">
                 <label for="exampleInputEmail1" class="form-label">First Name</label>
-                <input type="text" class="form-control" name="firstName" ngModel #firstName placeholder="Enter First Name" required>
+                <input type="text" class="form-control" name="firstName" ngModel #firstName="ngModel" placeholder="Enter First Name" required="required"
+                [ngClass]="{'is-invalid':firstName.invalid && firstName.touched, 'is-valid':firstName.valid && firstName.touched}" >
               </div>
               <div class="mb-3 col">
                 <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                <input type="text" class="form-control" name="lastName" ngModel #lastName placeholder="Enter Last Name" required>
+                <input type="text" class="form-control" name="lastName" ngModel #lastName="ngModel" placeholder="Enter Last Name" required="required"
+                [ngClass]="{'is-invalid':lastName.invalid && lastName.touched, 'is-valid':lastName.valid && lastName.touched}" />
               </div>
             </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">User Name</label>
-                <input type="text" class="form-control" name="username" ngModel #username placeholder="Enter UserName" required>
+                <input type="text" class="form-control" name="username" ngModel #username="ngModel" placeholder="Enter UserName" required="required"
+                [ngClass]="{'is-invalid':username.invalid && username.touched, 'is-valid':username.valid && username.touched}" />
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" name="email" ngModel #email placeholder="Enter Email" required>
+                <input type="email" class="form-control" name="email" ngModel #email="ngModel" placeholder="Enter Email" required="required"
+                [ngClass]="{'is-invalid':email.invalid && email.touched, 'is-valid':email.valid && email.touched}" />
               </div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Password </label>
-                <input type="password" class="form-control" name="password" ngModel #password placeholder="Enter Password" required>
+                <input type="password" class="form-control" name="password" ngModel #password="ngModel" placeholder="Enter Password" required="required"
+                [ngClass]="{'is-invalid':password.invalid && password.touched, 'is-valid':password.valid && password.touched}" />
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Verify Password</label>
-                <input type="password" class="form-control" name="verifyPassword" ngModel placeholder=" Verify Password" required>
+                <input type="password" class="form-control" name="verifyPassword" ngModel #verifyPassword="ngModel" placeholder=" Verify Password" required="required"
+                [ngClass]="{'is-invalid':verifyPassword.invalid && verifyPassword.touched, 'is-valid':verifyPassword.valid && verifyPassword.touched}" />
               </div>
-              <button type="submit" class="btn btn-info" >Sing Up</button>
+              <button type="submit" class="btn btn-info" [disabled]="singUpForm.invalid" >Sing Up</button>
               <div class="row">
                 <div class="col-md-6">
                   <a routerLink="/login" style="text-decoration: none;"> Have An Account ? <span class="text-danger">Login</span></a>
                 </div>
                 <div class="col-md-6">
-                  <input type="checkbox" name="policy" id="policy" required>
+                  <input type="checkbox" name="policy" id="policy" required="required" 
+                  #policy="ngModel" ngModel [ngClass]="{'is-invalid':policy.invalid && policy.touched, 'is-valid':policy.valid && policy.touched}" />
                   I agree to these <a href="#">Terms and Conditions</a>
                 </div>
               </div>

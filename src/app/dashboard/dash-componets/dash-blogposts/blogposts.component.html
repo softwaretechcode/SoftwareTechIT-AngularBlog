@@ -10,16 +10,20 @@
           
         </tr>
       </thead>
-      <tbody>
+      <div *ngIf="load==true" class="spinner-border text-danger spinner-hide" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <tbody *ngIf="load==false">
         <tr *ngFor="let i of blogPosts;let indexOfelement=index;"> 
           <td>{{indexOfelement}}</td>
           <td>{{i.title}}</td>
           <td>
-            <a class="btn btn-warning m-1">Edit</a>
-            <a class="btn btn-warning m-1">Edit</a>
-            <a class="btn btn-warning m-1">Edit</a>
+            <a class="btn btn-warning m-1" href="/dashboard/edit-post">Edit</a>
+            <a class="btn btn-danger m-1">Delete</a>
+            <a class="btn btn-primary m-1">View</a>
           </td>
         </tr>
+       
       </tbody>
     </table>
   </div>

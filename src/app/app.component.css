@@ -1,10 +1,4 @@
-.wrapper{
-   
-    
-}
+
 .color-text{
     color: var(--text-color);
-}
-.content{
-    display: block;
 }
