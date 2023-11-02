@@ -16,18 +16,20 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { HireUsComponent } from './components/hire-us/hire-us.component';
 import { TagComponent } from './components/tag/tag.component';
 import { MenuPostlistComponent } from './components/menu-postlist/menu-postlist.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { SitemapComponent } from './components/sitemap/sitemap.component';
 
-const routes: Routes = [
+ const  routes: Routes = [
   { path: '',component: HomeComponent},
   { path: 'home', component: HomeComponent },
   { path: 'index.html', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'blog/:category', component: BlogComponent },
+  { path: 'category/:category', component: BlogComponent },
   { path: 'postlist', component: PostlistComponent },
   { path: 'postlist/:name', component: PostlistComponent },
   { path: 'post/:slug', component: PostComponent },
   { path: 'login', component: LoginComponent,canActivate: [LogInAuthGuard] },
-  { path: 'sing-up', component: SingUpComponent,canActivate: [LogInAuthGuard] },
+  { path: 'sign-up', component: SingUpComponent,canActivate: [LogInAuthGuard] },
   { path: 'admin-login', component: AdminLoginComponent,canActivate: [AdminLoginGuard]},
   {path: 'admin-singup',component:AdminSingUpComponent,canActivate:[AdminLoginGuard]},
   {path:'404',component: ErrorPageComponent},
@@ -37,6 +39,8 @@ const routes: Routes = [
   {path:'tag',component:TagComponent},
   {path:'tag/:name',component:TagComponent},
   {path:'menu-postlist',component:MenuPostlistComponent},
+  {path:'about-us',component:AboutUsComponent},
+  {path:'sitemap',component:SitemapComponent},
   {path: '**', redirectTo:'/404'},
 ];
 

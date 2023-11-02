@@ -10,5 +10,6 @@ export const environment = {
     measurementId: 'G-HN16VR594S',
   },
   production: true,
-   apiUrl: '//localhost:3000/api/'
+  apiUrl: '//localhost:3000/api/'
+  //  apiUrl: '//192.168.43.5:3000/api/'
 };
