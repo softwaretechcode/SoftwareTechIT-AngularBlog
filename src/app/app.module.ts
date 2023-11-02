@@ -44,8 +44,11 @@ import { YoutubeServiceComponent } from './youtubeapi/services/youtube-service/y
 import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 import { CustomAdsComponent } from './components/custom-ads/custom-ads.component';
 import { TagComponent } from './components/tag/tag.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { SitemapComponent } from './components/sitemap/sitemap.component';
+import { MyGearComponent } from './components/my-gear/my-gear.component';
 
-// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 
 
 
@@ -77,6 +80,9 @@ import { TagComponent } from './components/tag/tag.component';
     CategoryMenuComponent,
     CustomAdsComponent,
     TagComponent,
+    AboutUsComponent,
+    SitemapComponent,
+    MyGearComponent,
   
    
    
@@ -95,7 +101,6 @@ import { TagComponent } from './components/tag/tag.component';
     MatButtonModule,
     MatIconModule,
     AppRoutingModule,
-    // CKEditorModule,
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

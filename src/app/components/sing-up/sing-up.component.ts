@@ -19,14 +19,11 @@ export class SingUpComponent implements OnInit {
   }
   async singUp(singUpForm:UsersModel){
     
-    if(singUpForm.email==''){
-      alert('Please Enter Email');
+    if(singUpForm){
+      alert('Please Fill Form');
       return;
     }
-    if(singUpForm.password=='' ){
-     alert('Please Enter Password');
-     return;
-    }
+    
     this.auth.singUp(singUpForm);
     
   }

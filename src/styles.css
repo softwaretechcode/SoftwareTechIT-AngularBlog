@@ -8,12 +8,13 @@
 
 :root {
   color-scheme: light dark; /* both supported */
- 
+ padding: 0;
+ margin: 0;
 }
 
 
 body { 
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'wolf2';
 
   background: var(--body-bg);
   --primary-color: #302ae6;
@@ -35,8 +36,13 @@ body {
   --btn-bg:#fbc917;
   --btn-border:#26001c;
   --gradiat-red-blue:linear-gradient(90deg, #fff,#fff);
+  --light-purple:#f8effe;
+  --light-yellow:#fef9ef;
+  --light-orenge:#fdf1f0;
   /* Font veriables */
- 
+  --small: 12px;
+  --medium: 16px;
+  --large: 24px;
  
 
 }
@@ -118,7 +124,9 @@ code{
 .border-top-bottom{
   border-top: 1px solid #595959;
   border-bottom: 1px solid #595959;
-  background: var(--secondary-color);
+  background: var(--color-card);
+  padding: 0 10px;
+  border-radius: 0.5rem;
 }
 
 /* CSS */
@@ -140,7 +148,27 @@ code{
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+.cbtn{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+section{
+  padding: 0;
+  margin: 0;
+}
+.btn-readmore{
+  text-decoration: none;
+ color: var(--gradiat-red-blue);
+ background: var(--color-card);
+ border-radius: 20px;
+ /* text-align: center; */
+ padding: 3px 1rem;
+ align-content: center;
+ font-weight: 500;
+ font-size: 0.9rem;
 
+}
 .button-74:hover {
   background-color: #fff;
 }
@@ -179,7 +207,38 @@ code{
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
-
+.spinner-hide{
+  display:flex;
+  /* justify-items: center; */
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* padding:0 1rem; */
+}
+.spinner-border{
+ border-style: dotted;
+}
+.pro-cat{
+  color: var(--text-color);
+	background: var(--planCard);
+	border-radius: 3px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	padding: 1px 4px;
+	position: absolute;
+  align-content: end;
+  align-items: end;
+  text-align: left;
+	top: 10px;
+	left: 10px;
+}
+.pro-cat a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.txt-small{
+  font-size: 14px;
+}
 @media (min-width: 768px) {
   .button-75 {
     min-width: 120px;
@@ -194,4 +253,7 @@ code{
 .btn{
   font-weight: 400;
   
+}
+a{
+  cursor: pointer;
 }

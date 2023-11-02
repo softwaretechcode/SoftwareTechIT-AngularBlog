@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./menu-postlist.component.css']
 })
 export class MenuPostlistComponent implements OnInit {
-
+  load:boolean=true;
   img="/src/assets/logo.png";
   blogPosts: BlogPostModel[]=[]
   apiUrl=environment.apiUrl;
@@ -23,17 +23,23 @@ export class MenuPostlistComponent implements OnInit {
   }
 
   async loadBlogPosts() {
-    let res;
-    this.blogService.getPosts().subscribe((body)=>{
-      this.blogPosts=body;
-     
+    this.blogService.getPosts().subscribe((responce)=>{
+      if(responce['statusCode']==200){
+       
+       
+         this.blogPosts=responce['body'];
+         this.load=false;
       
-    })
+     }
+     else if(responce['statusCode']==404){ this.load=true }
+     else if(responce['statusCode']==500){ this.load=true }
+ 
+     });
   }
 
   openDetailPost(slug: any){
     // window.alert("Post Is: "+_id);
-    let url: string ="/post/"+slug;
+    let url: string ='/post/'+slug;
     this.routerLink.navigateByUrl(url);
   }
 

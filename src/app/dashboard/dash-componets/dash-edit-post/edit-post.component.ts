@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FirebaseStorage } from "@angular/fire/storage"
-import * as customBuild from 'ckeditor5/src/ckeditor.js';
 import { FileHandler, FileUploadModel } from '../../dash-models/file-handle.model';
 import { Users } from '../../../models/users';
 import { BlogPostModel, CategoryModel, PostStatusEnum, generateCategorySlug, generateTitleSlug } from '../../../models/blogpost.model';
@@ -13,10 +12,6 @@ import { FileuploadService } from '../../dash-services/fileupload.service';
 import { formatDate } from '@angular/common';
 import { CategoryService } from '../../dash-services/category.service';
 import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
-import { CKEditorComponent } from '@ckeditor/ckeditor5-angular';
- 
-
-
 
 
 @Component({
@@ -28,9 +23,7 @@ export class EditPostComponent implements OnInit {
   @Input() model: NgModel;
   @Input() values = [];
   @Input() text = 'Select All';
- public Editor = customBuild.default;
-  
-  @ViewChild('editor') editorComponent: CKEditorComponent;
+
   selectedFiles?: FileList;
   currentFileUpload?: File;
   fileslist:any[];
@@ -76,7 +69,7 @@ export class EditPostComponent implements OnInit {
     
    
    this.category_serv.getCategorys().subscribe((body)=>{
-    this.categorys=body;
+    this.categorys=body['body'];
   })
   }
   selectedThumbnail(event) {
@@ -117,7 +110,7 @@ export class EditPostComponent implements OnInit {
     data.author = {
       name: "softwaretechit",
       email: "demo@webkit.com",
-      avatar: "/uploads/assets/profiles/profile.png",
+      avatar: "public/assets/profiles/profile.png",
     }
     let blogPost: BlogPostModel = data;
     let res=this.blogService.createPost(blogPost);

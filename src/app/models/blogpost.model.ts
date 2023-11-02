@@ -16,7 +16,7 @@ export interface BlogPostModel {
   comments: Comment[];
   likes?: string |'';
   dislikes?: string |'';
-  views?: string |'';
+  views?: number |0;
   images?: FileUploadModel [];
 
 }
@@ -34,7 +34,12 @@ export interface CategoryModel {
   slug: string |'';
   date?: string |'';
 }
-
+export interface TagsModel {
+  _id?: string;
+  tagTitle: string |'';
+  tagSlug: string |'';
+  tagDate?: string |'';
+}
 export interface CommentModel {
   _id?: string;
   author?: AuthorModel;

@@ -1,10 +1,15 @@
 
-<div class="post row">
+<div class="spinner-hide">
+  <div *ngIf="load==true" class=" spinner-border text-danger " role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div *ngIf="load==false" class="post row">
   <nav aria-label="breadcrumb ">
     <ol class="breadcrumb border-top-bottom">
       <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
       <li class="breadcrumb-item"><a routerLink="/blog">BlogPost</a></li>
-      <li class="breadcrumb-item active" aria-current="page">{{post.title | slice:0:80 }}{{ post.title.length > 80 ? '...' : ''}}</li>
+      <li class="breadcrumb-item active" aria-current="page">{{post.slug | slice:0:50 }}{{ post.slug.length > 50 ? '...' : ''}}</li>
     </ol>
   </nav>
 <div class="col post-container p-3">
@@ -25,7 +30,7 @@
     
     <h1 class="title">{{post.title}}</h1>
    
-    <h3 class="border-top-bottom"><a routerLink="/blog/{{post.category}}">📂{{post.category}} </a><span class="post-date"><i class="bi bi-calendar-plus-fill"></i> {{post.date}}</span> <span class="post-author"><i class="bi bi-person-circle"></i> {{post.author.name}}</span> <span class="post-views"><i class="bi bi-eye-fill"></i>{{post.views}}</span> </h3>
+    <h3 class="border-top-bottom"><a routerLink="/category/{{post.category}}">📂{{post.category}} </a><span class="post-date"><i class="bi bi-calendar-plus-fill"></i> {{post.date}}</span> <span class="post-author"><img *ngIf="post.author.avatar!=null" class="authorAvatar" [src]="apiUrl+post.author.avatar"  > {{post.author.name}}</span> <span class="post-views"><i class="bi bi-eye-fill"></i>{{post.views}}</span></h3>
   </div> 
   <div class="sub-title">
     <h3>{{post.subTitle}}</h3>
