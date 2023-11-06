@@ -1,9 +1,0 @@
-{
-  "hosting": [
-    {
-      "site": "stitpass",
-    "public": "dist/softwaretechit",
-      "frameworksBackend": {}
-    }
-  ]
-}
