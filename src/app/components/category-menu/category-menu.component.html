@@ -4,12 +4,13 @@
     <span class="visually-hidden">Loading...</span>
   </div>
 </div>
+
  <div *ngIf="load==false">
    <div  class="category-list" *ngFor="let i of categorys">
       <a class=" btn btn-link" href="./category/{{i.name}}" >📂{{i.name}}</a>
    </div> 
  </div>
-
+<p>Demo Categorys</p>
  <div *ngIf="load==false">
   <div  class="category-list" *ngFor="let i of categorysDemo">
      <a class=" btn btn-link" href="./category/{{i.name}}" >📂{{i.name}}</a>

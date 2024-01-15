@@ -19,8 +19,8 @@ import { MenuPostlistComponent } from './components/menu-postlist/menu-postlist.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 
- const  routes: Routes = [
-  { path: '',component: HomeComponent},
+const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'index.html', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
@@ -28,20 +28,20 @@ import { SitemapComponent } from './components/sitemap/sitemap.component';
   { path: 'postlist', component: PostlistComponent },
   { path: 'postlist/:name', component: PostlistComponent },
   { path: 'post/:slug', component: PostComponent },
-  { path: 'login', component: LoginComponent,canActivate: [LogInAuthGuard] },
-  { path: 'sign-up', component: SingUpComponent,canActivate: [LogInAuthGuard] },
-  { path: 'admin-login', component: AdminLoginComponent,canActivate: [AdminLoginGuard]},
-  {path: 'admin-singup',component:AdminSingUpComponent,canActivate:[AdminLoginGuard]},
-  {path:'404',component: ErrorPageComponent},
-  {path:'examples/login', component:LoginexComponent },
-  {path:'projects',component:ProjectsComponent},
-  {path:'hireus',component:HireUsComponent},
-  {path:'tag',component:TagComponent},
-  {path:'tag/:name',component:TagComponent},
-  {path:'menu-postlist',component:MenuPostlistComponent},
-  {path:'about-us',component:AboutUsComponent},
-  {path:'sitemap',component:SitemapComponent},
-  {path: '**', redirectTo:'/404'},
+  { path: 'login', component: LoginComponent, canActivate: [LogInAuthGuard] },
+  { path: 'sign-up', component: SingUpComponent, canActivate: [LogInAuthGuard] },
+  { path: 'admin-login', component: AdminLoginComponent, canActivate: [AdminLoginGuard] },
+  { path: 'admin-singup', component: AdminSingUpComponent, canActivate: [AdminLoginGuard] },
+  { path: '404', component: ErrorPageComponent },
+  { path: 'examples/login', component: LoginexComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'hireus', component: HireUsComponent },
+  { path: 'tag', component: TagComponent },
+  { path: 'tag/:name', component: TagComponent },
+  { path: 'menu-postlist', component: MenuPostlistComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'sitemap', component: SitemapComponent },
+  { path: '**', redirectTo: '/404' },
 ];
 
 @NgModule({

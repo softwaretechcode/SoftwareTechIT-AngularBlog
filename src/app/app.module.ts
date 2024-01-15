@@ -28,7 +28,7 @@ import { FileManagerComponent } from './dashboard/dash-componets/file-manager/fi
 import { MatDrawerContainer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {LoginexComponent  } from "./example/loginex/loginex.component";
+import { LoginexComponent } from "./example/loginex/loginex.component";
 import { CreateCategoriesComponent } from './dashboard/dash-componets/create-categories/create-categories.component';
 import { MenuPostlistComponent } from './components/menu-postlist/menu-postlist.component';
 import { ServiceSectionComponent } from './components/service-section/service-section.component';
@@ -46,10 +46,6 @@ import { TagComponent } from './components/tag/tag.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 import { MyGearComponent } from './components/my-gear/my-gear.component';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -72,7 +68,7 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     ServiceSectionComponent,
     ProjectsComponent,
     HireUsComponent,
-    MenuCardComponent, 
+    MenuCardComponent,
     VideoComponent,
     PlaylistComponent,
     YoutubeServiceComponent,
@@ -82,10 +78,7 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     AboutUsComponent,
     SitemapComponent,
     MyGearComponent,
-  
-   
-   
-   
+
   ],
   imports: [
     BrowserModule,
@@ -105,10 +98,9 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideStorage(() => getStorage()),
-    
-    
+
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -13,7 +13,6 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class BlogComponent implements OnInit {
   blogPosts: BlogPostModel[]=[];
-  
   blogPostsflt: BlogPostModel[]=[];
   categorys:CategoryModel[]=[];
   param=null;
@@ -23,7 +22,6 @@ export class BlogComponent implements OnInit {
   apiUrl=environment.apiUrl;
   isOpened: boolean = true;
   desktopViewWidth: number = 1100;
-  
   //DEMO BLOCK
   blogDemoPosts: BlogPostModel[]=[];
   blogDemoPostsflt: BlogPostModel[]=[];
@@ -37,7 +35,6 @@ export class BlogComponent implements OnInit {
   }
   ngOnInit() {
     this.onResize(window.innerWidth);
-   
     if(!this.activatedRoute.params){
       this.loadBlogPosts();
       this.loadDemoPosts();
@@ -51,19 +48,13 @@ export class BlogComponent implements OnInit {
   }
     this.category_serv.getCategorys().subscribe((body)=>{
       this.categorys=body; 
-     
-      
     });   
     this.category_serv.getDemoCategorys().subscribe((body)=>{
       this.categorysDemo=body;
     })
-   
-  
   }
 
-
   async loadBlogPosts() {
-
     this.blogService.getPosts().subscribe((responce)=>{
      if(responce['statusCode']==200){
       if(this.param!=null){

@@ -1,5 +1,5 @@
 {
-  "name": "SoftwareTechIT-angular",
+  "name": "softwareTechit-angular",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-    
+    "@angular-eslint/schematics": "^16.1.1",
     "@angular/animations": "^14.1.0",
     "@angular/cdk": "^14.2.7",
     "@angular/common": "^14.1.0",

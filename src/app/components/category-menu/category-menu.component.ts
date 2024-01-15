@@ -13,6 +13,7 @@ export class CategoryMenuComponent implements OnInit {
 
   //DEMO BLOCK
   categorysDemo:CategoryModel[]=[];
+  categoryServ:CategoryModel[]=[];
   load:boolean=true;
   constructor(private category_serv : CategoryService,private routerLink: Router, private activatedRoute: ActivatedRoute) { }
 
