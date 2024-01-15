@@ -10,25 +10,29 @@ import { AuthService } from 'src/app/shared/dashauth/auth.service';
 })
 export class LoginComponent implements OnInit {
  
-  email:string ='';
-  password:string ='';
+  // email:string ='';
+  // password:string ='';
   constructor(private auth:AuthService) {
    }
 
   ngOnInit(): void {
   }
-  async login(){
-    if(this.email=='' || this.password==''){
+   login(loginForm ){
+    if(loginForm.email=='' || loginForm.password==''){
       alert('Please Enter Email & Password');
       return;
     }else{
-      this.auth.login(this.email,this.password)
-      this.email='';
-      this.password='';
+      // this.email=loginForm.email;
+      // this.password=loginForm.password;
+
+      this.auth.login(loginForm.email,loginForm.password)
+      loginForm.email='';
+      loginForm.password='';
     }
     
   }
-  forgetPassword(){
-    this.auth.forgotPasswordService(this.email);
+  forgetPassword(email){
+    alert(email);
+    this.auth.forgotPasswordService(email);
   }
 }

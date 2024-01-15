@@ -1,9 +1,16 @@
 <div class="card p-2 hidden-mobile">
   <h2 class="cat-heading">Recent Posts</h2>
+  <div class="spinner-hide">
+    <div *ngIf="load==true" class=" spinner-border text-danger " role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div *ngIf="load==false">
   <div *ngFor="let i of blogPosts">
     <a href="./post/{{ i.slug }}" >
       <img src="{{apiUrl+i.featuredImage}}" height="50px" width="50px">
       <h4>{{ i.title | slice : 0 : 50 }}{{ i.title.length > 50 ? "..." : "" }}</h4>
     </a>
   </div>
+</div>
 </div>

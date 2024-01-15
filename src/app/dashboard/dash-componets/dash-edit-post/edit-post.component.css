@@ -27,7 +27,7 @@
     height: 150px;
     min-width: 100px;
     display: table;
-    background-color: #eee;
+    background: var(--ck-color-toolbar-background);
     width: 300px;
     border: dashed 1px #aaa;
     border-radius: 10px;

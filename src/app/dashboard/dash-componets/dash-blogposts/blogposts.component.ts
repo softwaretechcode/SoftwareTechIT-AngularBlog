@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 export class BlogpostsComponent implements OnInit {
 apiUrl=environment.apiUrl;
   blogPosts: BlogPostModel[]=[]
-  
+  load:boolean=true;
   constructor(private blogService: BlogService,private routerLink :Router) {}
 
   ngOnInit() {
@@ -20,9 +20,16 @@ apiUrl=environment.apiUrl;
   }
 
   async loadBlogPosts() {
-    this.blogService.getPosts().subscribe((body)=>{
-      this.blogPosts=body;  
-    })
+    this.blogService.getPosts().subscribe((responce)=>{
+      if(responce['statusCode']==200){
+         this.blogPosts=responce['body'];
+         this.load=false;
+      
+     }
+     else if(responce['statusCode']==404){ this.load=true }
+     else if(responce['statusCode']==500){ this.load=true }
+ 
+     });
   }
   openDetailPost(slug: any){
     // window.alert("Post Is: "+_id);

@@ -1,11 +1,15 @@
-@media (max-width: 1000px) {
+@media(max-width:450px) {
   .hidden-mobile {
     display: none;
   }
   .mobile-center{
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: right;
   }
+  .footer-section1{
+    margin: 0 1rem;
+  color: var(--text-color);
+  } 
 }
 footer{
   margin-top: 10px;
@@ -14,10 +18,11 @@ footer{
   
 }
 .footer-section1{
+  
 color: var(--text-color);
 } 
 .footer-bottom{
-
+display: block;
 }
 .footer-copyright{
   color: var(--text-color);
@@ -30,14 +35,18 @@ color: var(--text-color);
 }
 .nav-item{
   display: flex;
+  padding: auto;
+  text-align: left;
 }
 /* .dropdown-menu{
  
 } */
 .nav-link{
+  cursor: pointer;
   display: block;
   padding: 5px;
   font-size: 1rem;
+  text-align: left;
   color:var(--text-color);
 }
 
@@ -47,7 +56,10 @@ color: var(--text-color);
   color:#f204e6;
 }
 li:hover {
-  background-color: yellow;
+  font-family: Arial, Helvetica, sans-serif,Sans-serif;
+  font-weight: 800;
+  color: var(--secondary-color);
+  /* background-color: yellow; */
 }
 
 /* .logobg:hover {

@@ -14,6 +14,7 @@ export class PostlistComponent implements OnInit {
   img="/src/assets/logo.png";
   apiUrl=environment.apiUrl;
   blogPosts: BlogPostModel[]=[]
+  load:boolean=true;
   constructor(private blogService: BlogService,private routerLink: Router) {
   }
   ngOnInit() {
@@ -22,17 +23,24 @@ export class PostlistComponent implements OnInit {
   }
 
   async loadBlogPosts() {
-    
-    this.blogService.getPostsByLimit(12).subscribe((body)=>{
-      this.blogPosts=body;
+    this.blogService.getPosts().subscribe((responce)=>{
+      if(responce['statusCode']==200){
+       
+       
+         this.blogPosts=responce['body'];
+         this.load=false;
       
-    })
+     }
+     else if(responce['statusCode']==404){ this.load=true }
+     else if(responce['statusCode']==500){ this.load=true }
+ 
+     });
   }
 
   openDetailPost(slug: any){
     // window.alert("Post Is: "+_id);
-    let url: string ="/post/"+slug;
+    let url: string ='/post/'+slug;
     this.routerLink.navigateByUrl(url);
   }
-
+  
 }

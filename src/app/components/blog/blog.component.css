@@ -6,7 +6,9 @@ mat-drawer-container{
 }
 
 mat-drawer{
-background-color: var(--color-bg-drawer);
+  width: auto;
+  background-color: #73efe500;
+/* background-color: var(--color-bg-drawer); */
 
 }
 
@@ -14,22 +16,29 @@ background-color: var(--color-bg-drawer);
  line-height: 1.2rem;
 }
 .post-block .row{
-  margin: 1rem;
+  margin: 0.5rem;
   /* align-items: center; */
   /* justify-content: center; */
 }
 .card{
-  width: 90%;
+  /* width: 90%; */
   margin: 0.2rem;
   background-color: var(--t-bg-color-aqua);
     color:var(--font-color);
     width: 14rem;
-    border: 0.1rem dashed;
+    border: 0.01rem dashed;
 }
-.card .btn{
+/* .card .btn{
   width: 100%;
   margin: 0.2rem;
+} */
+.card .title
+.card .subTitle{
+ font-size: var(--small);
 }
+.card .txt-small{
+  font-size: var(--small);
+ }
 
 li{
     color: var(--font-color);
@@ -45,6 +54,7 @@ li{
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  border:2px solid black;
 }
 .card:hover{
   transform: translateY(-5px) scale(1.005) translateZ(0);
@@ -58,7 +68,7 @@ li{
   display: flex;
   background: linear-gradient(to right, #fff28f6d, #daa5cc81);
   width: auto;
-  height: 25vh;
+  height: 8rem;
 }
 
 .card .featuredImage{
