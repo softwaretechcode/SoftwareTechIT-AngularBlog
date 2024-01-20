@@ -22,6 +22,7 @@ body {
   --text-share:#a600ffe8;
   --font-color: #000;
   --heading-color: #292922;
+  /* --body-bg:#f5f1fe; */
   --body-bg:radial-gradient(circle, #fffdf4 0%, #f5fef1 35%, #c6fafb 60%, #ffffff 100%);
   --color-bg: linear-gradient(78deg,  #00feae19, #000dff17);
   --color-card: linear-gradient(78deg,  #fe000028, #ee00ff29);
@@ -53,7 +54,8 @@ body.light-theme {
   --font-color: #000;
   --heading-color: #292922;
   --bg-bk-text-color:#fff;
-  --body-bg:radial-gradient(circle, #fffdf4 0%, #f5fef1 35%, #c6fafb 60%, #ffffff 100%);
+  --body-bg:#f5f1fe;
+  /* --body-bg:radial-gradient(circle, #fffdf4 0%, #f5fef1 35%, #c6fafb 60%, #ffffff 100%); */
   --color-bg: linear-gradient(78deg,  #00feae19, #000dff17);
   --color-card: linear-gradient(78deg,  #fe000028, #ee00ff29);
   --card-bg:linear-gradient(78deg,  #d7d5d513, #bba6bc14);
