@@ -12,15 +12,14 @@
     /* display: flex; */
     align-items: center;
     border-radius: 0.5rem;
-   
     padding: 0.5rem;
     color: var(--font-color);
   }
   .menu-section .badge a{
-    color: #fffffffe;
+    color: #ffe;
      text-decoration: none;
      padding: 20px 0;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .badge:hover{
     transform: translateY(-5px) scale(1.005) translateZ(0);
