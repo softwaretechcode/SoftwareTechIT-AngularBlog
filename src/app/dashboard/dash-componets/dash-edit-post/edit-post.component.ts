@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { FirebaseStorage } from "@angular/fire/storage"
 import { FileHandler, FileUploadModel } from '../../dash-models/file-handle.model';
 import { Users } from '../../../models/users';
 import { BlogPostModel, CategoryModel, PostStatusEnum, generateCategorySlug, generateTitleSlug } from '../../../models/blogpost.model';
