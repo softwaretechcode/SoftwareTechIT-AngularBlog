@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogComponent } from './components/blog/blog.component';
-import { AngularFireModule } from "@angular/fire/compat";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
@@ -20,11 +19,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AdminSingUpComponent } from './components/admin-sing-up/admin-sing-up.component';
 import { environment } from '../environments/environment';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth, getAuth } from '@angular/fire/auth';
-import { provideDatabase, getDatabase } from '@angular/fire/database';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { provideStorage, getStorage } from '@angular/fire/storage';
 import { FileManagerComponent } from './dashboard/dash-componets/file-manager/file-manager.component';
 import { MatDrawerContainer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -47,11 +41,6 @@ import { TagComponent } from './components/tag/tag.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 import { MyGearComponent } from './components/my-gear/my-gear.component';
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,10 +72,7 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     AboutUsComponent,
     SitemapComponent,
     MyGearComponent,
-  
-   
-   
-   
+
   ],
   imports: [
     BrowserModule,
@@ -101,14 +87,6 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     MatButtonModule,
     MatIconModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage()),
-    
-    
   ],
  
   providers: [],
