@@ -25,10 +25,10 @@ export class PostlistComponent implements OnInit {
   async loadBlogPosts() {
     this.blogService.getPosts().subscribe((responce)=>{
       if(responce['statusCode']==200){
-       
-       
          this.blogPosts=responce['body'];
          this.load=false;
+         console.log(responce['body']);
+         
       
      }
      else if(responce['statusCode']==404){ this.load=true }
@@ -39,7 +39,7 @@ export class PostlistComponent implements OnInit {
 
   openDetailPost(slug: any){
     // window.alert("Post Is: "+_id);
-    let url: string ='/post/'+slug;
+    let url: string =slug;
     this.routerLink.navigateByUrl(url);
   }
   
