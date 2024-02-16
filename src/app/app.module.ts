@@ -41,6 +41,7 @@ import { TagComponent } from './components/tag/tag.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 import { MyGearComponent } from './components/my-gear/my-gear.component';
+import { DatePipePipe } from './date-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +73,7 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     AboutUsComponent,
     SitemapComponent,
     MyGearComponent,
+    DatePipePipe,
 
   ],
   imports: [

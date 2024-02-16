@@ -5,34 +5,36 @@
 </div>
 
 <div *ngIf="load==false" class="d-flex postlist-container">
-    <div class="row">
+  <div class="row">
     <div *ngFor="let i of blogPosts;" class="card">
       <span class="pro-cat"><a href="/category/{{i.category}}">📂{{i.category}}</a></span>
-      <a (click)="openDetailPost(i.slug)" >
-      <div class="imgbg">
-        <img *ngIf="i.featuredImage!=null" class="featuredImage" src="{{apiUrl+i.featuredImage}}"  >
-        <img *ngIf="i.featuredImage==null" class="featuredImage" src="/src/assets/logo.png" >
-      </div> 
-      <h2 type="button" (click)="openDetailPost(i.slug)">{{i.title | slice:0:50 }}{{ i.title.length > 50 ? '...' : ''}} </h2>
-      <a class="category-link" href="/category/{{i.category}}">📂{{i.category}}</a>
-      <p>{{i.subTitle | slice:0:80 }}{{ i.subTitle.length > 80 ? '...' : ''}} </p>
-      <!-- <i *ngIf="i.author.avatar!=null" class="bi bi-person-circle"></i> -->
-      <h4> <img *ngIf="i.author.avatar!=null" class="authorAvatar" [src]="apiUrl+i.author.avatar"  > {{i.author.name}} 
-        <i class="bi bi-suit-heart-fill poplike" ></i>
-       </h4>
-       <a  class="cbtn btn-readmore"
-        (click)="openDetailPost(i.slug)">Read More</a>
-       <div class="row text-post-bottom">
-        <p class="col txt-small"><i class="bi bi-clock"></i>{{i.date}}</p>
-        <a class="col txt-small shareicon" href="/"><i class="bi bi-share"></i> Share</a>
+      <a (click)="openDetailPost(i.slug)">
+        <div class="imgbg">
+          <img *ngIf="i.featuredImage!=null" class="featuredImage" src="{{apiUrl+i.featuredImage}}">
+          <img *ngIf="i.featuredImage==null" class="featuredImage" src="/src/assets/logo.png">
+        </div>
+        <h2 type="button" (click)="openDetailPost(i.slug)">{{i.title | slice:0:50 }}{{ i.title.length > 50 ? '...' :
+          ''}} </h2>
+          
+            <a class="col category-link" href="/category/{{i.category}}">📂{{i.category}}</a>&nbsp;<i class="bi bi-calendar"></i>{{i.date | datePipe:'MMM dd yyyy'}}
+            <!-- <p class="col txt-small"></p> -->
+          
+       
+        <p>{{i.subTitle | slice:0:80 }}{{ i.subTitle.length > 80 ? '...' : ''}} </p>
+        <!-- <i *ngIf="i.author.avatar!=null" class="bi bi-person-circle"></i> -->
+        <h4> <img *ngIf="i.author.avatar!=null" class="authorAvatar" [src]="apiUrl+i.author.avatar"> {{i.author.name}}
+          <i class="bi bi-suit-heart-fill poplike"></i>
+          <a class="col txt-small shareicon" href="/"><i class="bi bi-share"></i> Share</a>
+        </h4>
+        <!-- <div class="row text-post-bottom">
         
-       </div>
-      
-      </a>
-    
-  </div>
+      </div> -->
+        <a class="cbtn btn-readmore" (click)="openDetailPost(i.slug)">Read More</a>
+      </a><br />
+
+    </div>
     <div *ngIf="blogPosts==null">
       <h1>No Post Found</h1>
-    </div></div>
+    </div>
   </div>
-  
+</div>

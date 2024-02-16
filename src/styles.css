@@ -43,6 +43,9 @@ body {
   --small: 12px;
   --medium: 16px;
   --large: 24px;
+  --light-gray: #f0f0f0;
+  --light-blue: #f3f7ff;
+  --blue-gray: #716f8a;
  
 
 }
@@ -62,6 +65,9 @@ body.light-theme {
   --t-bg-color-aqua:#7af8ff3f;
   --btn-bg:#fbc917;
   --btn-border:#26001c;
+  --light-gray: #f0f0f0;
+  --light-blue: #f3f7ff;
+  --blue-gray: #716f8a;
 }
 body.dark-theme {
   --primary-color: #9a97f3;
@@ -152,6 +158,7 @@ code{
   align-items: center;
   text-align: center;
   justify-content: center;
+  display: block;
 }
 section{
   padding: 0;
@@ -238,6 +245,9 @@ section{
 }
 .txt-small{
   font-size: 14px;
+}
+.txt-extra-small{
+  font-size: 11px;
 }
 @media (min-width: 768px) {
   .button-75 {
