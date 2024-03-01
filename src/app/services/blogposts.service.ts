@@ -41,8 +41,13 @@ export class BlogService {
     
     return this.http.get(`${this.apiUrl}blog-posts/${slug}`);
   }
+  getSinglePostById(id:string){  
+    
+    return this.http.get(`${this.apiUrl}blog-posts/${id}`);
+  }
+  
   updatePost(id: string, post: BlogPostModel): Observable<any> {
-    const url = `${this.apiUrl}blog-posts/${id}`;
+    const url = `${this.apiUrl}/views-update/${id}`;
     return this.http.put<BlogPostModel>(url, post);
   }
 

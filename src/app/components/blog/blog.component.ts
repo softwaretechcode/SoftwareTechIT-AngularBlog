@@ -37,7 +37,7 @@ export class BlogComponent implements OnInit {
   }
   ngOnInit() {
     this.onResize(window.innerWidth);
-   
+    
     if(!this.activatedRoute.params){
       this.loadBlogPosts();
       this.loadDemoPosts();
@@ -85,7 +85,7 @@ export class BlogComponent implements OnInit {
     }
     else if(responce['statusCode']==404){ this.load=true }
     else if(responce['statusCode']==500){ this.load=true }
-
+      
     });
   }
 

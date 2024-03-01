@@ -1,16 +1,19 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { BlogPostModel } from 'src/app/models/blogpost.model';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-menu-postlist',
-  templateUrl: './menu-postlist.component.html',
-  styleUrls: ['./menu-postlist.component.css'],
-  
+  selector: 'app-post-dash-list',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './post-dash-list.component.html',
+  styleUrls: ['./post-dash-list.component.css']
 })
-export class MenuPostlistComponent implements OnInit {
+export class PostDashListComponent implements OnInit {
+
   load:boolean=true;
   img="/src/assets/logo.png";
   blogPosts: BlogPostModel[]=[]
@@ -26,8 +29,6 @@ export class MenuPostlistComponent implements OnInit {
   async loadBlogPosts() {
     this.blogService.getPosts().subscribe((responce)=>{
       if(responce['statusCode']==200){
-       
-       
          this.blogPosts=responce['body'];
          this.load=false;
       
@@ -43,6 +44,7 @@ export class MenuPostlistComponent implements OnInit {
     let url: string ='/post/'+slug;
     this.routerLink.navigateByUrl(url);
   }
+
 
 
 }

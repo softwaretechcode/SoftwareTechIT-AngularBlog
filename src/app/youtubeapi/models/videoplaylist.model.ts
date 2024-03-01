@@ -1,13 +1,8 @@
 export interface Root {
     kind: string
     etag: string
-    pageInfo: PageInfo
     items: Item[]
-  }
-  
-  export interface PageInfo {
-    totalResults: number
-    resultsPerPage: number
+    pageInfo: PageInfo
   }
   
   export interface Item {
@@ -15,7 +10,6 @@ export interface Root {
     etag: string
     id: string
     snippet: Snippet
-    contentDetails: ContentDetails
   }
   
   export interface Snippet {
@@ -25,7 +19,11 @@ export interface Root {
     description: string
     thumbnails: Thumbnails
     channelTitle: string
-    localized: Localized
+    playlistId: string
+    position: number
+    resourceId: ResourceId
+    videoOwnerChannelTitle: string
+    videoOwnerChannelId: string
   }
   
   export interface Thumbnails {
@@ -66,12 +64,13 @@ export interface Root {
     height: number
   }
   
-  export interface Localized {
-    title: string
-    description: string
+  export interface ResourceId {
+    kind: string
+    videoId: string
   }
   
-  export interface ContentDetails {
-    itemCount: number
+  export interface PageInfo {
+    totalResults: number
+    resultsPerPage: number
   }
   

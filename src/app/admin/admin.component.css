@@ -1,6 +1,6 @@
 mat-sidenav-container {
     height: 100vh;
-    background-image:var(--color-bg);
+    background-image:var(--transparent-bg);
     margin: 0px;
     color: #fff;
   }
@@ -8,7 +8,7 @@ mat-sidenav-container {
     margin: auto;
     padding: 10px;
     width: max-content;
-    background-color: var(--color-bg-drawer);
+    background-color: var(--transparent-bg);
   }
   mat-icon {
     margin: auto;

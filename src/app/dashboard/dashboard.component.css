@@ -1,19 +1,19 @@
 mat-sidenav-container {
   height: 100vh;
   
-  background-image:var(--color-bg);
+  background-color:var(--transparent-bg);
   color: #fff;
 }
 mat-sidenav {
  width: fit-content;
- padding: 1rem;
+ padding: 0rem 1rem;
  
  
-  background-color: var(--color-bg-drawer);
+  background-color: var(--transparent-bg);
 }
 mat-icon {
   
-  color: #fdfdff9c;
+  color: #4b4bce9c;
 }
 .menu-item {
   padding: 10px;

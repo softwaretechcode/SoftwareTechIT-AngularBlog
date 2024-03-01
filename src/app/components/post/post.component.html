@@ -4,8 +4,9 @@
     <span class="visually-hidden">Loading...</span>
   </div>
 </div>
+<section>
 <div *ngIf="load==false" class="post row">
-  <nav aria-label="breadcrumb ">
+  <nav aria-label="breadcrumb " class="hidden-mobile">
     <ol class="breadcrumb border-top-bottom">
       <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
       <li class="breadcrumb-item"><a routerLink="/blog">BlogPost</a></li>
@@ -27,23 +28,18 @@
     <a class="btn btn-outline-success pagination-previous" href="\">Previus</a>
   </div> -->
   <div class="post-header">
-    
     <h1 class="title">{{post.title}}</h1>
-   
     <h3 class="border-top-bottom"><a routerLink="/category/{{post.category}}">📂{{post.category}} </a><span class="post-date"><i class="bi bi-calendar-plus-fill"></i> {{post.date| datePipe:'MMM dd yyyy'}}</span> <span class="post-author"><img *ngIf="post.author.avatar!=null" class="authorAvatar" [src]="apiUrl+post.author.avatar"  > {{post.author.name}}</span> <span class="post-views"><i class="bi bi-eye-fill"></i>{{post.views}}</span></h3>
   </div> 
   <div class="sub-title">
     <h3>{{post.subTitle}}</h3>
   </div>
-   
-    <img *ngIf="post.featuredImage!=null" [src]="apiUrl+post.featuredImage " alt="" height="250px" width="350px">
-    <img *ngIf="post.featuredImage==null" src="../../../assets/logo.png " alt="" height="250px" width="350px">
+    <img *ngIf="post.featuredImage!=null" [src]="apiUrl+post.featuredImage " alt="" >
+    <img *ngIf="post.featuredImage==null" src="../../../assets/logo.png " alt="" >
 <div class="post-content" [innerHTML]="post.content">
-  
 </div>
-
 </div>
-<div class="col-1 post-sidebar-container ">
+<div class="post-sidebar-container ">
   <div class="hidden-mobile">
     <app-menu-postlist ></app-menu-postlist>
   <app-custom-ads ></app-custom-ads>
@@ -54,3 +50,5 @@
 </div>
 
 </div>  
+
+</section>

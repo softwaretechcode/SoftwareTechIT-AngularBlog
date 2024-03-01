@@ -1,4 +1,3 @@
-import { DatePipe, formatDate, getLocaleDateFormat, getLocaleDateTimeFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

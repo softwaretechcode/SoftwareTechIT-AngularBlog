@@ -1,6 +1,8 @@
 export interface Root {
     kind: string
     etag: string
+    nextPageToken: string
+    regionCode: string
     pageInfo: PageInfo
     items: Item[]
   }
@@ -13,9 +15,13 @@ export interface Root {
   export interface Item {
     kind: string
     etag: string
-    id: string
+    id: Id
     snippet: Snippet
-    contentDetails: ContentDetails
+  }
+  
+  export interface Id {
+    kind: string
+    playlistId: string
   }
   
   export interface Snippet {
@@ -25,15 +31,14 @@ export interface Root {
     description: string
     thumbnails: Thumbnails
     channelTitle: string
-    localized: Localized
+    liveBroadcastContent: string
+    publishTime: string
   }
   
   export interface Thumbnails {
     default: Default
     medium: Medium
     high: High
-    standard: Standard
-    maxres: Maxres
   }
   
   export interface Default {
@@ -52,26 +57,5 @@ export interface Root {
     url: string
     width: number
     height: number
-  }
-  
-  export interface Standard {
-    url: string
-    width: number
-    height: number
-  }
-  
-  export interface Maxres {
-    url: string
-    width: number
-    height: number
-  }
-  
-  export interface Localized {
-    title: string
-    description: string
-  }
-  
-  export interface ContentDetails {
-    itemCount: number
   }
   

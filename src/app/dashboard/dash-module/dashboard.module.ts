@@ -15,8 +15,7 @@ import { BlogpostsComponent } from '../dash-componets/dash-blogposts/blogposts.c
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { BlogComponent } from 'src/app/components/blog/blog.component';
-import { PostlistComponent } from 'src/app/components/postlist/postlist.component';
+
 // import { } from 'ckeditor5/build/ckeditor.js'
 
 @NgModule({
@@ -26,6 +25,7 @@ import { PostlistComponent } from 'src/app/components/postlist/postlist.componen
     ProfileComponent,
     UsersComponent,
     BlogpostsComponent, 
+   
 
     
   ],
@@ -42,6 +42,7 @@ import { PostlistComponent } from 'src/app/components/postlist/postlist.componen
     FormsModule,
     HttpClientModule,
     MatProgressBarModule,
+    
     
   ],
   providers: [],

@@ -13,7 +13,7 @@ export class CategoryMenuComponent implements OnInit {
 
   //DEMO BLOCK
   categorysDemo:CategoryModel[]=[];
-  load:boolean=true;
+  load:boolean=false;
   constructor(private category_serv : CategoryService,private routerLink: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

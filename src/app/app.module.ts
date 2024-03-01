@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,17 +32,13 @@ import { AdminModule } from './admin/admin-modules/admin/admin.module';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HireUsComponent } from './components/hire-us/hire-us.component';
 import { MenuCardComponent } from './components/menu-card/menu-card.component';
-
-import { VideoComponent } from './youtubeapi/components/video/video.component';
-import { PlaylistComponent } from './youtubeapi/components/playlist/playlist.component';
-import { YoutubeServiceComponent } from './youtubeapi/services/youtube-service/youtube-service.component';
 import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 import { CustomAdsComponent } from './components/custom-ads/custom-ads.component';
 import { TagComponent } from './components/tag/tag.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 import { MyGearComponent } from './components/my-gear/my-gear.component';
-import { DatePipePipe } from './date-pipe.pipe';
+import { DatePipePipe } from './pipes/date-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,9 +61,6 @@ import { DatePipePipe } from './date-pipe.pipe';
     ProjectsComponent,
     HireUsComponent,
     MenuCardComponent, 
-    VideoComponent,
-    PlaylistComponent,
-    YoutubeServiceComponent,
     CategoryMenuComponent,
     CustomAdsComponent,
     TagComponent,
@@ -89,7 +83,8 @@ import { DatePipePipe } from './date-pipe.pipe';
     MatButtonModule,
     MatIconModule,
     AppRoutingModule,
-  ],
+      
+],
  
   providers: [],
   bootstrap: [AppComponent]

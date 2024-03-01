@@ -7,14 +7,14 @@
     text-align: right;
   }
   .footer-section1{
-    margin: 0 1rem;
+    /* margin: 0 0.5rem; */
   color: var(--text-color);
   } 
 }
 footer{
   margin-top: 10px;
   font-weight: 500;
-  padding-bottom: 1vh;
+  /* padding-bottom: 1vh; */
   
 }
 .footer-section1{

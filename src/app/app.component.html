@@ -1,5 +1,9 @@
-<section >
-  <app-header async></app-header>
-  <router-outlet class="container" async></router-outlet>
-  <app-footer async></app-footer>
-</section>
+<ng-doc-root>
+	<ng-doc-navbar [leftContent]="leftContent">
+		<ng-template #leftContent>
+			<h3 style="margin: 0">MyAwesomeDoc</h3>
+		</ng-template>
+	</ng-doc-navbar>
+	<ng-doc-sidebar></ng-doc-sidebar>
+<router-outlet></router-outlet>
+</ng-doc-root>

@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "site": "stit",
+      "site": "softwaretechitapp",
     "public": "dist/softwaretechit",
       "frameworksBackend": {}
     }

@@ -14,14 +14,36 @@
     border-radius: 0.5rem;
     padding: 0.5rem;
     color: var(--font-color);
+   
   }
+  .menu-section .badge-ctm{
+    margin: 0.2rem;
+    
+   display: inline-block;
+   align-items: center;
+   border-radius: 0.6rem;
+   padding: 0.4rem;
+ }
+
   .menu-section .badge a{
     color: #ffe;
      text-decoration: none;
      padding: 20px 0;
     font-size: 0.9rem;
   }
+  .menu-section .badge-ctm a{
+    color: var(--font-color);
+     text-decoration: none;
+     padding: 20px 0;
+     font-weight: 600;
+    font-size: 0.9rem;
+  }
   .badge:hover{
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px #2fff896d;
+  }
+  .badge-ctm:hover{
     transform: translateY(-5px) scale(1.005) translateZ(0);
     box-shadow: 0 24px 36px rgba(0,0,0,0.11),
       0 24px 46px #2fff896d;

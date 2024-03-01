@@ -8,21 +8,23 @@
 
 :root {
   color-scheme: light dark; /* both supported */
- padding: 0;
- margin: 0;
+--base-font-size:0.6rem;
+ --transparent-bg:#00000000;
+ --font-family-ctm:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ --framer-font-family: "SF Pro Rounded Heavy", "-apple-system", "BlinkMacSystemFont", sans-serif;
 }
 
 
 body { 
-  font-family: 'wolf2';
-
+  color: var(--font-color);
   background: var(--body-bg);
+  --code-block-bg:#b7cbff88;
   --primary-color: #302ae6;
   --secondary-color: #c3c8d5;
   --text-share:#a600ffe8;
   --font-color: #000;
   --heading-color: #292922;
-  --body-bg:radial-gradient(circle, #fffdf4 0%, #f5fef1 35%, #c6fafb 60%, #ffffff 100%);
+  --body-bg:radial-gradient(circle,#f6f8ff ,#fcedfa , #fefded , #e8f3fa );
   --color-bg: linear-gradient(78deg,  #00feae19, #000dff17);
   --color-card: linear-gradient(78deg,  #fe000028, #ee00ff29);
   --card-bg:linear-gradient(78deg,  #d7d5d513, #bba6bc14);
@@ -52,11 +54,13 @@ body {
 body.light-theme { 
   --primary-color: #302ae6;
   --secondary-color: #c3c8d5;
+  --code-block-bg:#b7cbff88;
   --text-share:#a600ffe8;
   --font-color: #000;
   --heading-color: #292922;
   --bg-bk-text-color:#fff;
-  --body-bg:radial-gradient(circle, #fffdf4 0%, #f5fef1 35%, #c6fafb 60%, #ffffff 100%);
+  /* --body-bg:radial-gradient(circle,#f6f8ff ,#fcedfa , #fefded , #e8f3fa ); */
+--body-bg:linear-gradient(-180deg,#dbfdfd,#ebfae4,#eff2fc, #f7ecec);
   --color-bg: linear-gradient(78deg,  #00feae19, #000dff17);
   --color-card: linear-gradient(78deg,  #fe000028, #ee00ff29);
   --card-bg:linear-gradient(78deg,  #d7d5d513, #bba6bc14);
@@ -71,7 +75,8 @@ body.light-theme {
 }
 body.dark-theme {
   --primary-color: #9a97f3;
-  --secondary-color: #1e293bff;
+  --secondary-color:#181a20 ;
+  --code-block-bg:#2d2525a6;
   --text-share:#00eeffe8;
   --font-color: #e1e1ff;
   --heading-color: #ff0a78;
@@ -87,13 +92,20 @@ body.dark-theme {
   --btn-bg:#ffc904;
   --btn-border:#600042;
 } 
-
-p{
-  font-size: 1rem;
-  color: var(--font-color);
+h1{
+  font-size: 1.8rem;  
+ 
 }
+h2{
+  font-size: 1.2rem;
+ 
+}
+/* p{
+  font-size: 0.6rem;
+  color: var(--font-color);
+} */
 
-h1, h2, h3, h4, h5, h6{
+h1 h2 h3 h4 h5 h6 p{
  color:var(--font-color);
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -109,24 +121,37 @@ h1, h2, h3, h4, h5, h6{
   display: block;
   background: var(--color-card);
  }
-pre {
-  white-space: pre-wrap;
-  overflow-x: auto;
-  background-color: var(--secondary-color);
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  padding: 10px;
-  border: 1px solid #ff0a78;
-  border-left: 3px dashed #9a97f3;
-  box-shadow: 0px 5px 1px 0px #fffb00;
 
+ /*for Code Block*/
+ pre {
+  background-color: var(--code-block-bg);
+  overflow: auto;
+  font-family: 'Monaco', monospace;
+  padding: 0.3rem;
+  box-shadow: 0px 5px 10px #f204e679;
+  border-left:2px dashed #ffe100;
+  border-bottom:5px solid #ffe100;
+  border-radius: 5px;
 }
-code{
-  
-  font-size: 0.9rem;
-  font-family: 'Courier New', Courier, monospace;
-        line-height: 15px;
-        color: #ffffff;
+code {
+  font-family: Monaco, monospace;
+  font-size: var(--base-font-size);
+  line-height: 100%;
+  background-color: var(--code-block-bg);
+  padding: 0.2em;
+  letter-spacing: -0.05em;
+  word-break: normal;
+  border-radius: 5px;
 }
+pre code {
+  border: none;
+  background: none;
+  font-size: var(--base-font-size) * 0.875;
+  line-height: 1em;
+  letter-spacing: normal;
+  word-break: break-all;
+}
+
 .border-top-bottom{
   border-top: 1px solid #595959;
   border-bottom: 1px solid #595959;
@@ -245,9 +270,12 @@ section{
 }
 .txt-small{
   font-size: 14px;
+  color: var(--text-color);
+  
 }
 .txt-extra-small{
   font-size: 11px;
+  color: var(--text-color);
 }
 @media (min-width: 768px) {
   .button-75 {
@@ -266,4 +294,27 @@ section{
 }
 a{
   cursor: pointer;
+}
+
+/* custom background colors */
+.bg-primary-ctm{
+ background:#007bff04;
+}
+.bg-secondary-ctm{
+background:#6c757d35;
+}
+.bg-success-ctm{
+background:#28a74535;
+}
+.bg-danger-ctm{
+background:#dc354535;
+}
+.bg-warning-ctm{
+background:#ffc10735;
+}
+.bg-info-ctm{
+background:#17a2b835;
+}
+.bg-dark-ctm{
+background:#00000035;
 }

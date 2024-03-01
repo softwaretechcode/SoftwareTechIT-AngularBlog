@@ -5,9 +5,8 @@
 
   <div class="post-block">
     <button type="button" mat-button (click)="drawer.toggle()">
-      <h3 style="color: var(--text-share)">Open Menu></h3>
+      <mat-icon>menu</mat-icon>
     </button>
-    <br />
     <div class="spinner-hide">
       <div *ngIf="load == true" class="spinner-border text-danger" role="status">
         <span class="visually-hidden">Loading...</span>
@@ -20,24 +19,17 @@
             <img *ngIf="i.featuredImage != null" class="featuredImage" [src]="apiUrl + i.featuredImage" />
             <img *ngIf="i.featuredImage == null" class="featuredImage" src="./assets/logo.png" />
           </div>
-          <h2 class="text-xl" type="button" (click)="openDetailPost(i.slug)">
+          <h3 class="blog-title" type="button" (click)="openDetailPost(i.slug)">
             {{ i.title | slice : 0 : 50 }}{{ i.title.length > 50 ? "..." : "" }}
-          </h2>
-          <p class="subTitle">
-            {{ i.subTitle | slice : 0 : 80
-            }}{{ i.subTitle.length > 80 ? "..." : "" }}
-          </p>
-          <!-- <h4 class="authorUser"><img *ngIf="i.author.avatar==null" class="authorAvatar" src="./assets/logo.png"> {{i.author.name}}</h4> -->
-
-          <h4 class="authorUser">
-            <img *ngIf="i.author.avatar != null" class="authorAvatar" [src]="apiUrl + i.author.avatar" />
-            {{ i.author.name }}
+          </h3>
+          <h4><a class="category-link" href="/category/{{i.category}}">📂{{i.category}}</a>&nbsp;&nbsp;<i
+            class="bi bi-calendar"></i>{{i.date | datePipe:'MMM dd yyyy'}}</h4>
+          <p class="description">{{ i.subTitle | slice : 0 : 80 }}{{ i.subTitle.length > 80 ? "..." : "" }}</p>
+          <h4 class="authorUser"><img *ngIf="i.author.avatar!=null" class="authorAvatar" [src]="apiUrl+i.author.avatar"> {{i.author.name}}
+            <i class="bi bi-suit-heart-fill poplike"></i>
+            <a class="col txt-small shareicon" href="/"><i class="bi bi-share"></i></a>
           </h4>
           <a type="button" class="cbtn btn-readmore" (click)="openDetailPost(i.slug)">Read More</a>
-          <div class="row">
-            <p class="col txt-small"><i class="bi bi-calendar"></i>{{ i.date | datePipe:'MMM dd yyyy' }}</p>
-            <a class="col txt-small shareicon" href="/"><i class="bi bi-share"></i> Share</a>
-          </div>
         </ng-container>
       </div>
       <h3 class="text-center">More Posts Not Found</h3>
@@ -46,10 +38,7 @@
 
   <!--DEMO Posts Block-->
   <div class="post-block">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <h3 style="color: var(--text-share)">Open Menu></h3>
-    </button>
-    <br />
+   
     <div class="spinner-hide">
       <div *ngIf="load == true" class="spinner-border text-danger" role="status">
         <span class="visually-hidden">Loading...</span>
@@ -62,28 +51,26 @@
             <img *ngIf="i.featuredImage != null" class="featuredImage" [src]="i.featuredImage" />
             <img *ngIf="i.featuredImage == null" class="featuredImage" src="./assets/logo.png" />
           </div>
-          <h2 class="text-xl" type="button" (click)="openDetailPost(i.slug)">
+          <h3 class="blog-title" type="button" (click)="openDetailPost(i.slug)">
             {{ i.title | slice : 0 : 50 }}{{ i.title.length > 50 ? "..." : "" }}
-          </h2>
-          <p class="subTitle">
-            {{ i.subTitle | slice : 0 : 80
-            }}{{ i.subTitle.length > 80 ? "..." : "" }}
-          </p>
-          <!-- <h4 class="authorUser"><img *ngIf="i.author.avatar==null" class="authorAvatar" src="./assets/logo.png"> {{i.author.name}}</h4> -->
+          </h3>
+          
+          <h4><a class="category-link" href="/category/{{i.category}}">📂{{i.category}}</a>&nbsp;&nbsp;<i
+            class="bi bi-calendar"></i>{{i.date | datePipe:'MMM dd yyyy'}}</h4>
+          <p class="description">{{ i.subTitle | slice : 0 : 80 }}{{ i.subTitle.length > 80 ? "..." : "" }}</p>
 
           <h4 class="authorUser">
             <img *ngIf="i.author.avatar != null" class="authorAvatar" [src]="i.author.avatar" />
-            {{ i.author.name }}
+            {{ i.author.name }} <a class=" txt-small shareicon" href="/"><i class="bi bi-share"></i></a>
           </h4>
           <a type="button" class="cbtn btn-readmore" (click)="openDetailPost(i.slug)">Read More</a>
-          <div class="row">
-            <p class="col txt-small">
+          <!-- <h4>
               <i class="bi bi-calendar"></i>{{ i.date | datePipe : "MMM-dd-yyyy" }}
-            </p>
             <a class="col txt-small shareicon" href="/"><i class="bi bi-share"></i> Share</a>
-          </div>
+          </h4> -->
         </ng-container>
       </div>
+      
       <h3 class="text-center">More Posts Not Found</h3>
     </div>
   </div>

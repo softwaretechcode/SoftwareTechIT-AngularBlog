@@ -39,7 +39,7 @@ export class PostlistComponent implements OnInit {
 
   openDetailPost(slug: any){
     // window.alert("Post Is: "+_id);
-    let url: string =slug;
+    let url: string ='/post/'+slug;
     this.routerLink.navigateByUrl(url);
   }
   

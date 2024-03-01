@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VideoComponent } from './video.component';
+import { PostDashListComponent } from './post-dash-list.component';
 
-describe('VideoComponent', () => {
-  let component: VideoComponent;
-  let fixture: ComponentFixture<VideoComponent>;
+describe('PostDashListComponent', () => {
+  let component: PostDashListComponent;
+  let fixture: ComponentFixture<PostDashListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideoComponent ]
+      imports: [ PostDashListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VideoComponent);
+    fixture = TestBed.createComponent(PostDashListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

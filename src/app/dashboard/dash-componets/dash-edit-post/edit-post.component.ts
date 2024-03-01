@@ -11,6 +11,7 @@ import { FileuploadService } from '../../dash-services/fileupload.service';
 import { formatDate } from '@angular/common';
 import { CategoryService } from '../../dash-services/category.service';
 import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -28,13 +29,17 @@ export class EditPostComponent implements OnInit {
   fileslist:any[];
   percentage :number;
   blogPost: BlogPostModel;
+  updatePost:BlogPostModel;
   categorys:CategoryModel[]=[];
   imageUrl: String;
   selectedValue:any;
   postStatus:PostStatusEnum;
   loading: boolean = false;
+  load:boolean=false;
   postForm: FormGroup;
   content:any;
+  id:any;
+ 
   public config = {
     toolbar: [ 'heading', '|',
       'fontfamily','fontsize',
@@ -53,7 +58,7 @@ export class EditPostComponent implements OnInit {
     ]
   }
 
-  constructor(private fileUploadService : FileuploadService, private blogService: BlogService, private category_serv: CategoryService,private formBuilder: FormBuilder) { 
+  constructor(private fileUploadService : FileuploadService, private blogService: BlogService, private category_serv: CategoryService,private formBuilder: FormBuilder,private activatedRoute: ActivatedRoute,private routerLink:Router) { 
     this.postForm=formBuilder.group({
       title:['',Validators.required],
       subTitle:['',Validators.required],
@@ -62,7 +67,29 @@ export class EditPostComponent implements OnInit {
       content:['',Validators.required],
       status:['',Validators.required]
     })
+    this.activatedRoute.paramMap.subscribe((x: { get: (arg0: string) => any; }) => {
+      this.id = x.get('id');
+      this.load=false;
+    });
+
+    this.blogService.getSinglePostById(this.id).subscribe(
+      (responce)=>{
+        if(responce['statusCode']==200){
+          this.load=false;
+          this.updatePost=responce['body'];
+        }
+        else if(responce['statusCode']==404 && responce['statusCode']==500){
+          this.routerLink.navigate['/404'];
+          
+        }
+      
+      },err=>{
+        
+        console.log(err);
+        
+      });
   }
+
 
   ngOnInit(): void {
     
@@ -75,7 +102,7 @@ export class EditPostComponent implements OnInit {
     this.selectedFiles = event.target.files;
     this.fileslist=event.target.files;
     this.currentFileUpload=this.selectedFiles[0];
-    console.log(this.fileslist[0].file.name);
+    console.log(this.fileslist[0].file);
     
   }
 

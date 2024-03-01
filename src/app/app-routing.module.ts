@@ -18,6 +18,8 @@ import { TagComponent } from './components/tag/tag.component';
 import { MenuPostlistComponent } from './components/menu-postlist/menu-postlist.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
+import { MyckeditorFullFeaturedComponent } from './myckeditor5/myckeditor-full-featured/myckeditor-full-featured.component';
+import { MyGearComponent } from './components/my-gear/my-gear.component';
 
  const  routes: Routes = [
   { path: '',component: HomeComponent},
@@ -29,7 +31,7 @@ import { SitemapComponent } from './components/sitemap/sitemap.component';
   { path: 'postlist', component: PostlistComponent },
   { path: 'postlist/:name', component: PostlistComponent },
   { path: 'post/:slug', component: PostComponent },
-  { path: ':slug', component: PostComponent },
+  // { path: ':slug', component: PostComponent },
   { path: 'login', component: LoginComponent,canActivate: [LogInAuthGuard] },
   { path: 'sign-up', component: SingUpComponent,canActivate: [LogInAuthGuard] },
   { path: 'admin-login', component: AdminLoginComponent,canActivate: [AdminLoginGuard]},
@@ -43,6 +45,8 @@ import { SitemapComponent } from './components/sitemap/sitemap.component';
   {path:'menu-postlist',component:MenuPostlistComponent},
   {path:'about-us',component:AboutUsComponent},
   {path:'sitemap',component:SitemapComponent},
+  {path:'mygear',component:MyGearComponent},
+  {path:'myckeditor5',component:MyckeditorFullFeaturedComponent},
   {path: '**', redirectTo:'/404'},
 ];
 

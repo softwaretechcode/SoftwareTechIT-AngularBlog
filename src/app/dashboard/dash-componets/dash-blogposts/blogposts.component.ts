@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment.prod';
 export class BlogpostsComponent implements OnInit {
 apiUrl=environment.apiUrl;
   blogPosts: BlogPostModel[]=[]
-  load:boolean=true;
+  load:boolean=false;
   constructor(private blogService: BlogService,private routerLink :Router) {}
 
   ngOnInit() {
@@ -37,5 +37,9 @@ apiUrl=environment.apiUrl;
     this.routerLink.navigateByUrl(url);
   }
   
+  editPost(id: any){
+    let url: string ="dashboard/edit-post/"+id;
+    this.routerLink.navigateByUrl(url);
+  }
 
 }

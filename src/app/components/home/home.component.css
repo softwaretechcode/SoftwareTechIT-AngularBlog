@@ -6,12 +6,13 @@
  margin: 5px;
 }
 .hero-section{
- color: aliceblue;
+ color: var(--font-color);
  }
 .hero-section .text-h{
   padding: 10px 0;
     font-size: 3.2em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--font-color);
 }
 .hero-section .grediant-text{
  
@@ -34,6 +35,7 @@
     padding: 0 10px;
     font-size: 2.3rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 .hero-section span{
   color: #00ef67;

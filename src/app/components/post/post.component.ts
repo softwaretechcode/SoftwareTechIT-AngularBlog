@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  load:boolean=true;
+  load:boolean=false;
   slug: string;
   post: BlogPostModel;
   apiUrl=environment.apiUrl;

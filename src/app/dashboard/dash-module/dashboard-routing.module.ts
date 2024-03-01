@@ -14,6 +14,7 @@ const routes: Routes = [
   {
     path: 'dashboard', component: DashboardComponent, children: [
       { path: 'edit-post', component: EditPostComponent },
+      { path: 'edit-post/:id', component: EditPostComponent },
       { path: 'users', component: UsersComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'blog-posts', component: BlogpostsComponent },

@@ -46,3 +46,13 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+
+
+# NgDoc files
+/ng-doc
+
+# NgDoc files
+/ng-doc
+
+# NgDoc files
+/ng-doc

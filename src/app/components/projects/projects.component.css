@@ -1,23 +1,29 @@
-.page-title{
+.page-title {
     text-align: center;
     font-size: 1.8rem;
     color: var(--font-color);
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.container{
+
+.container {
     color: var(--font-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.card{
+
+.card {
     background: #00000000;
 }
-/* .card:hover{
+
+.card:hover {
     transform: translateY(-5px) scale(1.005) translateZ(0);
-box-shadow: 0 24px 36px rgba(0,0,0,0.11),
-  0 24px 46px #2fff896d;
-box-shadow: #fff7002d;
-background: #ffd7616b;
-transition: transform 0.3s ease-out;
+    box-shadow: 0 24px 36px #fff52f6d,
+        0 24px 46px #2fff896d;
+    box-shadow: #fefbae2d;
+  
+    transition: transform 0.3s ease-out;
 }
+
+/*
 .btn:hover{
     transform: translateY(-5px) scale(1.005) translateZ(0);
 box-shadow: 0 24px 36px rgba(0,0,0,0.11),

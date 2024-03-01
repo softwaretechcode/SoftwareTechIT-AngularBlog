@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../shared/dashauth/auth.service';
 import { UsersModel } from 'src/app/models/users.models';
 
-
-
 @Component({
   selector: 'app-sing-up',
   templateUrl: './sing-up.component.html',
