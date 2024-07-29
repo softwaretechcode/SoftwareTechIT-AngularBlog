@@ -15,13 +15,10 @@ import { PostComponent } from './components/post/post.component';
 import { PostlistComponent } from './components/postlist/postlist.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
 import { DashboardModule } from './dashboard/dash-module/dashboard.module';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AdminSingUpComponent } from './components/admin-sing-up/admin-sing-up.component';
 import { environment } from '../environments/environment';
 import { FileManagerComponent } from './dashboard/dash-componets/file-manager/file-manager.component';
-import { MatDrawerContainer, MatSidenavModule } from '@angular/material/sidenav';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { MatIconModule } from '@angular/material/icon';
 import {LoginexComponent  } from "./example/loginex/loginex.component";
 import { CreateCategoriesComponent } from './dashboard/dash-componets/create-categories/create-categories.component';
@@ -81,10 +78,7 @@ import { MyGearComponent } from './components/my-gear/my-gear.component';
     BrowserAnimationsModule,
     DashboardModule,
     AdminModule,
-    MatCardModule,
     MatGridListModule,
-    MatSidenavModule,
-    MatButtonModule,
     MatIconModule,
     AppRoutingModule,
   ],
