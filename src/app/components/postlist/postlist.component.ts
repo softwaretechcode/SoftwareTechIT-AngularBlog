@@ -4,11 +4,14 @@ import { BlogPostModel, CategoryModel } from 'src/app/models/blogpost.model';
 import { CategoryService } from 'src/app/dashboard/dash-services/category.service';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
+import { SlicePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-postlist',
-  templateUrl: './postlist.component.html',
-  styleUrls: ['./postlist.component.css']
+    selector: 'app-postlist',
+    templateUrl: './postlist.component.html',
+    styleUrls: ['./postlist.component.css'],
+    standalone: true,
+    imports: [SlicePipe]
 })
 export class PostlistComponent implements OnInit {
   img="/src/assets/logo.png";

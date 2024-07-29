@@ -8,8 +8,8 @@ describe('MyckeditorFullFeaturedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MyckeditorFullFeaturedComponent ]
-    })
+    declarations: [MyckeditorFullFeaturedComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(MyckeditorFullFeaturedComponent);

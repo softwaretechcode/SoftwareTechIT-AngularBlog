@@ -8,8 +8,8 @@ describe('YoutubeServiceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ YoutubeServiceComponent ]
-    })
+    imports: [YoutubeServiceComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(YoutubeServiceComponent);

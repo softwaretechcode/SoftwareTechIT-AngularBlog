@@ -3,19 +3,22 @@ import { FileHandler, FileUploadModel } from '../../dash-models/file-handle.mode
 import { Users } from '../../../models/users';
 import { BlogPostModel, CategoryModel, PostStatusEnum, generateCategorySlug, generateTitleSlug } from '../../../models/blogpost.model';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatLegacyProgressBarModule as MatProgressBarModule } from '@angular/material/legacy-progress-bar';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { Observable } from 'rxjs';
 import { HttpEventType } from '@angular/common/http';
 import { FileuploadService } from '../../dash-services/fileupload.service';
-import { formatDate } from '@angular/common';
+import { formatDate, NgStyle } from '@angular/common';
 import { CategoryService } from '../../dash-services/category.service';
-import { FormBuilder, FormGroup, NgModel, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgModel, Validators, FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-edit-post',
-  templateUrl: './edit-post.component.html',
-  styleUrls: ['./edit-post.component.css'],
+    selector: 'app-edit-post',
+    templateUrl: './edit-post.component.html',
+    styleUrls: ['./edit-post.component.css'],
+    standalone: true,
+    imports: [FormsModule, NgStyle],
 })
 export class EditPostComponent implements OnInit {
   @Input() model: NgModel;

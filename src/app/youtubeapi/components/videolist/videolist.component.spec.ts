@@ -8,8 +8,8 @@ describe('VideolistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideolistComponent ]
-    })
+    declarations: [VideolistComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(VideolistComponent);

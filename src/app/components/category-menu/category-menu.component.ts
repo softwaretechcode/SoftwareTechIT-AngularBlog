@@ -4,9 +4,10 @@ import { CategoryService } from 'src/app/dashboard/dash-services/category.servic
 import { CategoryModel } from 'src/app/models/blogpost.model';
 
 @Component({
-  selector: 'app-category-menu',
-  templateUrl: './category-menu.component.html',
-  styleUrls: ['./category-menu.component.css']
+    selector: 'app-category-menu',
+    templateUrl: './category-menu.component.html',
+    styleUrls: ['./category-menu.component.css'],
+    standalone: true
 })
 export class CategoryMenuComponent implements OnInit {
   categorys:CategoryModel[]=[];

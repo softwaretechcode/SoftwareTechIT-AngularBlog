@@ -15,8 +15,8 @@ export class DashboardComponent implements OnInit {
   dashLNK=null;
   menuItems = [{title:'Dashboard',link:'./',icon:'dashboard'}, {title:'Profile',link:'./profile',icon:'account_box'},{title:'Users',link:'./users',icon:'supervisor_account'},{title:'Edit Post',link:'./edit-post',icon:'create'},{title:'Blog Posts', link:'./blog-posts',icon:"view_list"},{title:'Create Category', link:'./create-category',icon:"category"}];
   @ViewChild(MatSidenav) sideNav!: MatSidenav;
-  
-  localtoken=false;
+   localtoken=false;
+
   ngOnInit(): void {
     if(localStorage.getItem('token') == 'true'){
       this.localtoken=true;

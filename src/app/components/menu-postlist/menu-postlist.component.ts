@@ -3,11 +3,14 @@ import { Router } from '@angular/router';
 import { BlogPostModel } from 'src/app/models/blogpost.model';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
+import { SlicePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-menu-postlist',
-  templateUrl: './menu-postlist.component.html',
-  styleUrls: ['./menu-postlist.component.css']
+    selector: 'app-menu-postlist',
+    templateUrl: './menu-postlist.component.html',
+    styleUrls: ['./menu-postlist.component.css'],
+    standalone: true,
+    imports: [SlicePipe]
 })
 export class MenuPostlistComponent implements OnInit {
   load:boolean=true;

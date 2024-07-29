@@ -4,9 +4,10 @@ import { map } from 'rxjs/operators';
 import { FileuploadService } from '../../dash-services/fileupload.service';
 
 @Component({
-  selector: 'app-file-manager',
-  templateUrl: './file-manager.component.html',
-  styleUrls: ['./file-manager.component.css']
+    selector: 'app-file-manager',
+    templateUrl: './file-manager.component.html',
+    styleUrls: ['./file-manager.component.css'],
+    standalone: true
 })
 export class FileManagerComponent implements OnInit {
   filesList : FileUploadModel [];

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-loginex',
-  templateUrl: './loginex.component.html',
-  styleUrls: ['./loginex.component.css']
+    selector: 'app-loginex',
+    templateUrl: './loginex.component.html',
+    styleUrls: ['./loginex.component.css'],
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule]
 })
 export class LoginexComponent implements OnInit {
   loginForm: FormGroup;

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-custom-ads',
-  templateUrl: './custom-ads.component.html',
-  styleUrls: ['./custom-ads.component.css']
+    selector: 'app-custom-ads',
+    templateUrl: './custom-ads.component.html',
+    styleUrls: ['./custom-ads.component.css'],
+    standalone: true
 })
 export class CustomAdsComponent implements OnInit {
  

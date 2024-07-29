@@ -5,11 +5,17 @@ import { BlogPostModel, CategoryModel, PostStatusEnum } from 'src/app/models/blo
 import { CategoryService } from 'src/app/dashboard/dash-services/category.service';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
+import { SlicePipe } from '@angular/common';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
+import { CategoryMenuComponent } from '../category-menu/category-menu.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+    selector: 'app-blog',
+    templateUrl: './blog.component.html',
+    styleUrls: ['./blog.component.css'],
+    standalone: true,
+    imports: [MatSidenavModule, CategoryMenuComponent, MatLegacyButtonModule, SlicePipe]
 })
 export class BlogComponent implements OnInit {
   blogPosts: BlogPostModel[]=[];

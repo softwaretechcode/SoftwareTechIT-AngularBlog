@@ -8,8 +8,8 @@ describe('ViewDashComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewDashComponent ]
-    })
+    declarations: [ViewDashComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ViewDashComponent);

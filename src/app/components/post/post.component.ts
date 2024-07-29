@@ -3,11 +3,17 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { BlogPostModel } from 'src/app/models/blogpost.model';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
+import { SlicePipe } from '@angular/common';
+import { CategoryMenuComponent } from '../category-menu/category-menu.component';
+import { CustomAdsComponent } from '../custom-ads/custom-ads.component';
+import { MenuPostlistComponent } from '../menu-postlist/menu-postlist.component';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+    selector: 'app-post',
+    templateUrl: './post.component.html',
+    styleUrls: ['./post.component.css'],
+    standalone: true,
+    imports: [RouterLink, MenuPostlistComponent, CustomAdsComponent, CategoryMenuComponent, SlicePipe]
 })
 export class PostComponent implements OnInit {
   load:boolean=true;

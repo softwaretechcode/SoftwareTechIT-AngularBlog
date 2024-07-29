@@ -8,8 +8,8 @@ describe('MenuPostlistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenuPostlistComponent ]
-    })
+    imports: [MenuPostlistComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(MenuPostlistComponent);

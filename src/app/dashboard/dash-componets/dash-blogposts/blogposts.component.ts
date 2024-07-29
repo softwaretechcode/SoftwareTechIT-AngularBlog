@@ -3,11 +3,14 @@ import { BlogService } from 'src/app/services/blogposts.service';
 import { BlogPostModel } from '../../../models/blogpost.model';
 import { Router, Routes } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-blogposts',
-  templateUrl: './blogposts.component.html',
-  styleUrls: ['./blogposts.component.css']
+    selector: 'app-blogposts',
+    templateUrl: './blogposts.component.html',
+    styleUrls: ['./blogposts.component.css'],
+    standalone: true,
+    imports: [MatSidenavModule]
 })
 export class BlogpostsComponent implements OnInit {
 apiUrl=environment.apiUrl;

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminAuthService } from 'src/app/shared/adminauth/admin-auth.service';
+import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-admin-sing-up',
-  templateUrl: './admin-sing-up.component.html',
-  styleUrls: ['./admin-sing-up.component.css']
+    selector: 'app-admin-sing-up',
+    templateUrl: './admin-sing-up.component.html',
+    styleUrls: ['./admin-sing-up.component.css'],
+    standalone: true,
+    imports: [FormsModule, RouterLink]
 })
 export class AdminSingUpComponent implements OnInit {
 

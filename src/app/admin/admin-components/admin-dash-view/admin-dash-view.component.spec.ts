@@ -8,8 +8,8 @@ describe('AdminDashViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminDashViewComponent ]
-    })
+    imports: [AdminDashViewComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(AdminDashViewComponent);

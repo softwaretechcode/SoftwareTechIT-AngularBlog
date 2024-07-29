@@ -8,8 +8,8 @@ describe('CustomAdsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomAdsComponent ]
-    })
+    imports: [CustomAdsComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(CustomAdsComponent);
