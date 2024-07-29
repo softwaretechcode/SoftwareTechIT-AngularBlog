@@ -3,7 +3,7 @@ import { FileHandler, FileUploadModel } from '../../dash-models/file-handle.mode
 import { Users } from '../../../models/users';
 import { BlogPostModel, CategoryModel, PostStatusEnum, generateCategorySlug, generateTitleSlug } from '../../../models/blogpost.model';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatLegacyProgressBarModule as MatProgressBarModule } from '@angular/material/legacy-progress-bar';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { Observable } from 'rxjs';
 import { HttpEventType } from '@angular/common/http';
