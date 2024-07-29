@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FireBaseAngular:build:production"
+              "buildTarget": "FireBaseAngular:build:production"
             },
             "development": {
-              "browserTarget": "FireBaseAngular:build:development"
+              "buildTarget": "FireBaseAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FireBaseAngular:build"
+            "buildTarget": "FireBaseAngular:build"
           }
         },
         "test": {
