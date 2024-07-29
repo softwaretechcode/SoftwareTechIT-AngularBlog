@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {  CanActivate, Router,  } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class AdminAuthGuard implements CanActivate {
+export class AdminAuthGuard  {
   constructor(private _router: Router) { }
   canActivate(): boolean {
     if (localStorage.getItem('admin-token')=='true') {
