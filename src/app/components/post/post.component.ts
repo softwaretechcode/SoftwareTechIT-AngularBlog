@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import * as router from 'BACKEND/upload';
 import { BlogPostModel } from 'src/app/models/blogpost.model';
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
