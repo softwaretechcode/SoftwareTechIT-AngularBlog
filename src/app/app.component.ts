@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-root',

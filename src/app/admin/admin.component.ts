@@ -37,7 +37,7 @@ export class AdminComponent implements OnInit {
     }
 
   }
-  constructor(private observer: BreakpointObserver, private cd: ChangeDetectorRef, private auth: AdminAuthService, public router: Router) {
+  constructor(private observer: BreakpointObserver, private cd: ChangeDetectorRef, private auth: AdminAuthService, private router:Router) {
 
   }
   ngAfterViewInit(): void {
