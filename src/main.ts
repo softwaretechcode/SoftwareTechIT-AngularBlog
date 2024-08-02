@@ -21,7 +21,7 @@ bootstrapApplication(AppComponent, {
         provideAnimations(),
         provideHttpClient(),
         provideRouter(appRoutes)
-
+ 
     ]
 })
   .catch(err => console.error(err));
