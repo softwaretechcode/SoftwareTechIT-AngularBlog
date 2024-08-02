@@ -1,4 +1,3 @@
-import { Breakpoints } from '@angular/cdk/layout';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
 import { BlogPostModel, CategoryModel, PostStatusEnum } from 'src/app/models/blogpost.model';
@@ -6,7 +5,6 @@ import { CategoryService } from 'src/app/dashboard/dash-services/category.servic
 import { BlogService } from 'src/app/services/blogposts.service';
 import { environment } from 'src/environments/environment.prod';
 import { SlicePipe } from '@angular/common';
-import { MatLegacyButtonModule } from '@angular/material/legacy-button';
 import { CategoryMenuComponent } from '../category-menu/category-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -15,7 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     templateUrl: './blog.component.html',
     styleUrls: ['./blog.component.css'],
     standalone: true,
-    imports: [MatSidenavModule, CategoryMenuComponent, MatLegacyButtonModule, SlicePipe]
+    imports: [MatSidenavModule, CategoryMenuComponent, SlicePipe]
 })
 export class BlogComponent implements OnInit {
   blogPosts: BlogPostModel[]=[];

@@ -5,7 +5,6 @@ import { Router, RouterModule } from '@angular/router';
 import { AdminAuthService } from 'src/app/shared/adminauth/admin-auth.service';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatLegacyButtonModule } from '@angular/material/legacy-button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AdminProfileComponent } from './admin-components/admin-profile/admin-profile.component';
