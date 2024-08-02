@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { BlogComponent } from './components/blog/blog.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -19,7 +18,7 @@ import { MenuPostlistComponent } from './components/menu-postlist/menu-postlist.
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 
- const  routes: Routes = [
+ export const  appRoutes: Routes = [
   { path: '',component: HomeComponent},
   { path: 'home', component: HomeComponent },
   { path: 'index.html', component: HomeComponent },
@@ -43,11 +42,5 @@ import { SitemapComponent } from './components/sitemap/sitemap.component';
   {path:'menu-postlist',component:MenuPostlistComponent},
   {path:'about-us',component:AboutUsComponent},
   {path:'sitemap',component:SitemapComponent},
-  {path: '**', redirectTo:'/404'},
+  {path: '**', component:ErrorPageComponent},
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
