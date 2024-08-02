@@ -1,15 +1,11 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { FileHandler, FileUploadModel } from '../../dash-models/file-handle.model';
-import { Users } from '../../../models/users';
 import { BlogPostModel, CategoryModel, PostStatusEnum, generateCategorySlug, generateTitleSlug } from '../../../models/blogpost.model';
-import { DomSanitizer } from '@angular/platform-browser';
 import { BlogService } from 'src/app/services/blogposts.service';
-import { Observable } from 'rxjs';
-import { HttpEventType } from '@angular/common/http';
 import { FileuploadService } from '../../dash-services/fileupload.service';
-import { formatDate, NgStyle } from '@angular/common';
 import { CategoryService } from '../../dash-services/category.service';
-import { FormBuilder, FormGroup, NgModel, Validators, FormsModule } from '@angular/forms';
+import { Input,Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, FormsModule, NgModel, Validators } from '@angular/forms';
+import { formatDate, NgStyle } from '@angular/common';
+import { HttpEventType } from '@angular/common/http';
 
 
 @Component({
