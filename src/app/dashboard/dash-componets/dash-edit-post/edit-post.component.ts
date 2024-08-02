@@ -50,7 +50,7 @@ export class EditPostComponent implements OnInit {
     ]
   }
 
-  constructor(private fileUploadService : FileuploadService, private blogService: BlogService, private category_serv: CategoryService,private formBuilder: FormBuilder) { 
+  constructor(private fileUploadService : FileuploadService, private blogService: BlogService, private category_serv: CategoryService,private formBuilder:FormBuilder) { 
     this.postForm=formBuilder.group({
       title:['',Validators.required],
       subTitle:['',Validators.required],
