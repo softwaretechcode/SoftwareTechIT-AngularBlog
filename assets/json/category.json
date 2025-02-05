@@ -1,0 +1,180 @@
+{
+    "body": [
+    {
+    "_id": "64a708e72dafd558b48d2ecc",
+    "name": "Angular",
+    "slug": "angular",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64a709272dafd558b48d2ece",
+    "name": "Web Development",
+    "slug": "web-development",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64a7092b2dafd558b48d2ed0",
+    "name": "Java",
+    "slug": "java",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64a709302dafd558b48d2ed2",
+    "name": "PHP",
+    "slug": "php",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64a709352dafd558b48d2ed4",
+    "name": "HTML",
+    "slug": "html",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64a7180500ae8dad5a54e7ef",
+    "name": "Blog",
+    "slug": "blog",
+    "date": "2023/07/07",
+    "__v": 0
+    },
+    {
+    "_id": "64aef5b89f9e5a8be00f5494",
+    "name": "Python",
+    "slug": "python",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0260962179c0a91b27473",
+    "name": "CSS",
+    "slug": "css",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0262762179c0a91b27477",
+    "name": "Node.js",
+    "slug": "nodejs",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0263162179c0a91b27479",
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0264162179c0a91b2747b",
+    "name": "Full Stack",
+    "slug": "full-stack",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0265c62179c0a91b2747f",
+    "name": "Typescript",
+    "slug": "typescript",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0266b62179c0a91b27481",
+    "name": "JavaScript",
+    "slug": "javascript",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0267962179c0a91b27483",
+    "name": "Express.js",
+    "slug": "expressjs",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0268062179c0a91b27485",
+    "name": "C",
+    "slug": "c",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0268462179c0a91b27487",
+    "name": "C++",
+    "slug": "c",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b0269562179c0a91b27489",
+    "name": "Software Development",
+    "slug": "software-development",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026ae62179c0a91b2748d",
+    "name": "MEAN Stack",
+    "slug": "mean-stack",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026b362179c0a91b2748f",
+    "name": "MERN Stack",
+    "slug": "mern-stack",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026c062179c0a91b27491",
+    "name": ".Net",
+    "slug": "net",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026c862179c0a91b27493",
+    "name": "C#",
+    "slug": "c",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026d762179c0a91b27495",
+    "name": "Kotlin",
+    "slug": "kotlin",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026e662179c0a91b27497",
+    "name": "Ruby",
+    "slug": "ruby",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026ef62179c0a91b27499",
+    "name": "MySQL",
+    "slug": "mysql",
+    "date": "2023/07/13",
+    "__v": 0
+    },
+    {
+    "_id": "64b026ff62179c0a91b2749b",
+    "name": "PostgreSQL",
+    "slug": "postgresql",
+    "date": "2023/07/13",
+    "__v": 0
+    }
+    ],
+    "statusCode": 200
+    }
